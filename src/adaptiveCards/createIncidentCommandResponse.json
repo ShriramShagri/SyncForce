@@ -21,15 +21,15 @@
         "placeholder": "Please select category",
         "choices": [
           {
-            "title": "Red",
+            "title": "Hardware",
             "value": "1"
           },
           {
-            "title": "Green",
+            "title": "Software",
             "value": "2"
           },
           {
-            "title": "Blue",
+            "title": "NA",
             "value": "3"
           }
         ]
@@ -112,11 +112,11 @@
         "choices": [
           {
             "title": "Service Desk",
-            "value": "ServiceDesk"
+            "value": "Service Desk"
           },
           {
             "title": "Help Desk",
-            "value": "HelpDesk"
+            "value": "Help Desk"
           }
         ]
       },
