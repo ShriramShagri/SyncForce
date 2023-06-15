@@ -3,7 +3,7 @@ const { AdaptiveCards } = require("@microsoft/adaptivecards-tools");
 const { CardFactory, MessageFactory } = require("botbuilder");
 
 class CreateIncidentCommandHandler {
-  triggerPatterns = "ci";
+  triggerPatterns = "#create_incident";
 
   async handleCommandReceived(context, message) {
     console.log(`Bot received message: ${message.text}`);
