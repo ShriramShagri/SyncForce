@@ -1,0 +1,34 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+      {
+        "type": "TextBlock",
+        "text": "Congratulations!",
+        "size": "large",
+        "color" : "good"
+      },
+      {
+        "type": "TextBlock",
+        "text": "Incident Created successfully."
+      },
+      {
+        "type": "TextBlock",
+        "text": "**Incident Number : ${incidentNumber}**"
+      },
+      {
+        "type": "TextBlock",
+        "text": "Category : ${category}"
+      },
+      {
+        "type": "TextBlock",
+        "text": "Short Description : ${shortDescription}"
+      },
+      {
+        "type": "TextBlock",
+        "text": "Description : ${description}"
+      }
+    ]
+  }
+  

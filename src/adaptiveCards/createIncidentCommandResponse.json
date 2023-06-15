@@ -1,0 +1,135 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+      {
+        "type": "TextBlock",
+        "text": "Sure I can help you with that."
+      },
+      {
+        "type": "TextBlock",
+        "text": "To create the incident **please provide the below details:**"
+      },
+      {
+        "type": "Input.ChoiceSet",
+        "id": "category",
+        "label": "Category",
+        "style": "compact",
+        "isRequired": true,
+        "errorMessage": "This is a required input",
+        "placeholder": "Please select category",
+        "choices": [
+          {
+            "title": "Red",
+            "value": "1"
+          },
+          {
+            "title": "Green",
+            "value": "2"
+          },
+          {
+            "title": "Blue",
+            "value": "3"
+          }
+        ]
+      },
+      {
+        "type": "TextBlock",
+        "text": "Short Description"
+      },
+      {
+        "type": "Input.Text",
+        "id": "shortDescription",
+        "placeholder": "Please enter short description",
+        "maxLength": 500
+      },
+      {
+        "type": "TextBlock",
+        "text": "Description"
+      },
+      {
+        "type": "Input.Text",
+        "id": "description",
+        "placeholder": "Please enter description",
+        "maxLength": 1000,
+        "isMultiline": true
+      },
+      {
+        "type": "Input.ChoiceSet",
+        "id": "impact",
+        "label": "Impact",
+        "style": "compact",
+        "isRequired": true,
+        "errorMessage": "This is a required input",
+        "placeholder": "Please select impact",
+        "choices": [
+          {
+            "title": "3 - Low",
+            "value": "3"
+          },
+          {
+            "title": "2 - Medium",
+            "value": "2"
+          },
+          {
+            "title": "1 - High",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "type": "Input.ChoiceSet",
+        "id": "urgency",
+        "label": "Urgency",
+        "style": "compact",
+        "isRequired": true,
+        "errorMessage": "This is a required input",
+        "placeholder": "Please select urgency",
+        "choices": [
+          {
+            "title": "3 - Low",
+            "value": "3"
+          },
+          {
+            "title": "2 - Medium",
+            "value": "2"
+          },
+          {
+            "title": "1 - High",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "type": "Input.ChoiceSet",
+        "id": "assignmentGroup",
+        "label": "Assignment Group",
+        "style": "compact",
+        "isRequired": true,
+        "errorMessage": "This is a required input",
+        "placeholder": "Please select assignment group",
+        "choices": [
+          {
+            "title": "Service Desk",
+            "value": "ServiceDesk"
+          },
+          {
+            "title": "Help Desk",
+            "value": "HelpDesk"
+          }
+        ]
+      },
+      {
+        "type": "ActionSet",
+        "actions": [
+          {
+            "type": "Action.Execute",
+            "title": "Submit",
+            "verb": "incidentConfirmSubmit"
+          }
+        ]
+      }
+    ]
+  }
+  
