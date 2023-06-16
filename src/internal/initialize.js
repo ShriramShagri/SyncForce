@@ -1,8 +1,6 @@
 const { BotBuilderCloudAdapter } = require("@microsoft/teamsfx");
 const ConversationBot = BotBuilderCloudAdapter.ConversationBot;
-const { DoStuffActionHandler } = require("../cardActions/doStuffActionHandler");
 const { SubmitActionHandler } = require("../cardActions/submitActionHandler");
-const { HelloWorldCommandHandler } = require("../commands/helloworldCommandHandler");
 const config = require("./config");
 const { CreateIncidentCommandHandler } = require("../commands/createIncidentCommandHandler");
 const { ConfirmActionHandler } = require("../cardActions/confirmActionHandler");
@@ -18,11 +16,11 @@ const workflowApp = new ConversationBot({
   },
   command: {
     enabled: true,
-    commands: [new HelloWorldCommandHandler(), new CreateIncidentCommandHandler()],
+    commands: [new CreateIncidentCommandHandler()],
   },
   cardAction: {
     enabled: true,
-    actions: [new DoStuffActionHandler(), new SubmitActionHandler(), new ConfirmActionHandler()],
+    actions: [new SubmitActionHandler(), new ConfirmActionHandler()],
   },
 });
 
